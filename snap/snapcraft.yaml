@@ -59,3 +59,6 @@ parts:
       rm -rf ${SNAPCRAFT_PART_INSTALL}/opt/wine-staging/share/applications
       rm -rf ${SNAPCRAFT_PART_INSTALL}/opt/wine-staging/share/man
       rm -rf ${SNAPCRAFT_PART_INSTALL}/usr
+
+      # Disable winemenubuilder
+      sed -i 's/winemenubuilder.exe -a -r/winemenubuilder.exe -r/g' "${SNAPCRAFT_PART_INSTALL}"/opt/wine-staging/share/wine/wine.inf
