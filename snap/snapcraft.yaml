@@ -62,3 +62,6 @@ parts:
 
       # Disable winemenubuilder
       sed -i 's/winemenubuilder.exe -a -r/winemenubuilder.exe -r/g' "${SNAPCRAFT_PART_INSTALL}"/opt/wine-staging/share/wine/wine.inf
+
+      # add nlpfile
+      touch "${SNAPCRAFT_PART_INSTALL}"/opt/wine-staging/bin/nlpfile
